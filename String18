@@ -1,0 +1,33 @@
+package String;
+
+import java.util.Scanner;
+
+public class String18 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        String yangiSatr = kattaKichikAlmashtir(satr);
+        System.out.println("Natija: " + yangiSatr);
+    }
+
+    private static String kattaKichikAlmashtir(String satr) {
+        StringBuilder yangiSatr = new StringBuilder();
+
+        for (int i = 0; i < satr.length(); i++) {
+            char belgi = satr.charAt(i);
+
+            if (Character.isUpperCase(belgi)) {
+                yangiSatr.append(Character.toLowerCase(belgi));
+            } else if (Character.isLowerCase(belgi)) {
+                yangiSatr.append(Character.toUpperCase(belgi));
+            } else {
+                yangiSatr.append(belgi);
+            }
+        }
+
+        return yangiSatr.toString();
+    }
+}
