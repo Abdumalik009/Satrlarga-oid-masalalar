@@ -1,0 +1,28 @@
+package String;
+
+import java.util.Scanner;
+
+public class String29 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("C belgisini kiriting: ");
+        char c = scanner.next().charAt(0);
+        System.out.print("S1 satrini kiriting: ");
+        String s1 = scanner.next();
+        System.out.print("S2 satrini kiriting: ");
+        String s2 = scanner.next();
+
+        String yangiSatr = qoshC(c, s1, s2);
+        System.out.println("Natija: " + yangiSatr);
+    }
+
+    private static String qoshC(char c, String s1, String s2) {
+        int index = s1.indexOf(c);
+        if (index != -1) {
+            return s1.substring(0, index) + s2 + s1.substring(index);
+        } else {
+            return s1;
+        }
+    }
+}
