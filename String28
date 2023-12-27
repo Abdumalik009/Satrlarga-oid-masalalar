@@ -1,0 +1,31 @@
+package String;
+
+import java.util.Scanner;
+
+public class String28 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("C belgisini kiriting: ");
+        char c = scanner.next().charAt(0);
+        System.out.print("S satrini kiriting: ");
+        String s = scanner.next();
+
+        String yangiSatr = orttirC(c, s);
+        System.out.println("Natija: " + yangiSatr);
+    }
+
+    private static String orttirC(char c, String s) {
+        StringBuilder yangiSatr = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+            char belgi = s.charAt(i);
+            yangiSatr.append(belgi);
+            if (belgi == c) {
+                yangiSatr.append(c);
+            }
+        }
+
+        return yangiSatr.toString();
+    }
+}
