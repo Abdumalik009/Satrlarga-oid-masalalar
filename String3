@@ -1,0 +1,22 @@
+package String;
+
+import java.util.Scanner;
+
+public class String3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Belgini kiriting: ");
+        String belgi = scanner.nextLine();
+
+        if (belgi.length() < 3) {
+            System.out.println("Belgi uzunligi yetarli emas");
+        } else {
+            char oldin = belgi.charAt(0);
+            char keyin = belgi.charAt(belgi.length() - 1);
+
+            System.out.println("Oldin: " + oldin);
+            System.out.println("Keyin: " + keyin);
+        }
+    }
+}
