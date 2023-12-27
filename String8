@@ -1,0 +1,17 @@
+package String;
+
+import java.util.Scanner;
+
+public class String8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("N natural sonini kiriting: ");
+        int n = scanner.nextInt();
+        System.out.print("Belgini kiriting: ");
+        char belgi = scanner.next().charAt(0);
+
+        String natija = new String(new char[n]).replace('\0', belgi);
+        System.out.println("Natija: " + natija);
+    }
+}
