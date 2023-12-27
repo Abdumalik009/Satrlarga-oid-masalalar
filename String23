@@ -1,0 +1,27 @@
+package String;
+
+import java.util.Scanner;
+
+public class String23 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        double natija = qiymat(satr);
+        System.out.println("Arifmetik ifoda qiymati: " + natija);
+    }
+
+    private static double qiymat(String satr) {
+        String[] ifodalar = satr.split("[+-]");
+
+        double natija = 0;
+
+        for (String ifoda : ifodalar) {
+            natija += Double.parseDouble(ifoda);
+        }
+
+        return natija;
+    }
+}
