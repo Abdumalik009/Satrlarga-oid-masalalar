@@ -1,0 +1,15 @@
+package String;
+
+import java.util.Scanner;
+
+public class String11 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        String hosilSatr = satr.replaceAll("", " ").trim();
+        System.out.println("Natija: " + hosilSatr);
+    }
+}
