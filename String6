@@ -1,0 +1,20 @@
+package String;
+
+import java.util.Scanner;
+
+public class String6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Belgini kiriting: ");
+        String N = scanner.nextLine();
+
+        if (N.matches("\\d+")) {
+            System.out.println("digit");
+        } else if (N.matches("[a-zA-Z]+")) {
+            System.out.println("lotin");
+        } else {
+            System.out.println("nol");
+        }
+    }
+}
