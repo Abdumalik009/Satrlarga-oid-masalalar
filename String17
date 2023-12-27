@@ -1,0 +1,18 @@
+package String;
+
+import java.util.Scanner;
+
+public class String17 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String N = scanner.nextLine();
+
+        String result = N.toLowerCase();
+
+        System.out.println("n natija: " + result);
+
+
+    }
+}
