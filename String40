@@ -1,0 +1,26 @@
+package String;
+
+import java.util.Scanner;
+
+public class String40 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        pt(satr);
+    }
+
+    private static void pt(String satr) {
+        int birinchiIndex = satr.indexOf(' ');
+        int oxirgiIndex = satr.lastIndexOf(' ');
+
+        if (birinchiIndex != -1 && oxirgiIndex != -1 && birinchiIndex != oxirgiIndex) {
+            System.out.println("Birinchi probel orasidagi belgilar: " + satr.charAt(birinchiIndex + 1));
+            System.out.println("Oxirgi probel orasidagi belgilar: " + satr.charAt(oxirgiIndex + 1));
+        } else {
+            System.out.println("Bo'sh satr");
+        }
+    }
+}
