@@ -1,0 +1,17 @@
+package String;
+import java.util.Scanner;
+
+public class String2{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("son kiriting (32 < n <= 126): ");
+        int N = scanner.nextInt();
+
+        if (32 < N && N <= 126) {
+            char chara = (char) N;
+            System.out.println( N + " ga teng bo'lgan belgi: " + chara);
+        } else {
+            System.out.println("Xato son tori krititing");
+        }
+    }
+}
