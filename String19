@@ -1,0 +1,28 @@
+package String;
+
+import java.util.Scanner;
+
+public class String19 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        int natija = tekshir(satr);
+        System.out.println("Natija: " + natija);
+    }
+
+    private static int tekshir(String satr) {
+        try {
+            Double.parseDouble(satr);
+            if (satr.contains(".")) {
+                return 2;
+            } else {
+                return 1;
+            }
+        } catch (NumberFormatException e) {
+            return 0;
+        }
+    }
+}
