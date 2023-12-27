@@ -1,0 +1,27 @@
+package String;
+
+import java.util.Scanner;
+
+public class String39 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        ptoblem(satr);
+    }
+
+    private static void ptoblem(String satr) {
+        int birinchiIndex = satr.indexOf(' ');
+        int ikkinchiIndex = satr.indexOf(' ', birinchiIndex + 1);
+
+        if (birinchiIndex != -1 && ikkinchiIndex != -1) {
+            System.out.println("Birinchi probel orasidagi belgilar: " + satr.charAt(birinchiIndex + 1));
+            System.out.println("Ikkinchi probel orasidagi belgilar: " + satr.charAt(ikkinchiIndex + 1));
+        } else {
+            System.out.println("Bo'sh satr");
+        }
+    }
+}
+
