@@ -1,0 +1,24 @@
+package String;
+
+
+import java.util.Scanner;
+
+public class String14{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Satr kiriting: ");
+        String N = scanner.nextLine();
+
+        int n = 0;
+
+
+        for (int i = 0; i < N.length(); i++) {
+            char ch = N.charAt(i);
+            if (Character.isUpperCase(ch)) {
+                n++;
+            }
+        }
+
+        System.out.println("Satrdagi katta lotin harflari soni: " + n);
+    }
+}
