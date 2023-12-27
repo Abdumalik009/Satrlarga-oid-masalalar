@@ -1,0 +1,28 @@
+package String;
+
+import java.util.Scanner;
+
+public class String49 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        String[] sozlar = satr.split(" ");
+
+        for (int i = 0; i < sozlar.length; i++) {
+            if (sozlar[i].endsWith("A")) {
+                System.out.print("." + sozlar[i]);
+            } else {
+                System.out.print(sozlar[i]);
+            }
+
+            if (i < sozlar.length - 1) {
+                System.out.print(" ");
+            }
+        }
+
+        System.out.println();
+    }
+}
