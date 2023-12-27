@@ -1,0 +1,21 @@
+package String;
+
+import java.util.Scanner;
+
+public class String27 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("N1 natural sonini kiriting: ");
+        int n1 = scanner.nextInt();
+        System.out.print("N2 natural sonini kiriting: ");
+        int n2 = scanner.nextInt();
+        System.out.print("S1 satrini kiriting: ");
+        String s1 = scanner.next();
+        System.out.print("S2 satrini kiriting: ");
+        String s2 = scanner.next();
+
+        String yangiSatr = s1.substring(0, n1) + s2.substring(s2.length() - n2);
+        System.out.println("Natija: " + yangiSatr);
+    }
+}
