@@ -1,0 +1,20 @@
+package String;
+
+import java.util.Scanner;
+
+public class String25 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("O'nlik sanoq sistemasidagi sonni kiriting: ");
+        String onlikSatr = scanner.nextLine();
+
+        String ikkilikSatr = ikkilikSistema(onlikSatr);
+        System.out.println("Ikkilik sanoq sistemasidagi qiymati: " + ikkilikSatr);
+    }
+
+    private static String ikkilikSistema(String onlikSatr) {
+        int ikkilikQiymat = Integer.parseInt(onlikSatr);
+        return Integer.toBinaryString(ikkilikQiymat);
+    }
+}
