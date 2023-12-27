@@ -1,0 +1,23 @@
+package String;
+
+import java.util.Scanner;
+
+public class String42 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        String[] sozl = satr.split(" ");
+
+        for (String soz : sozl) {
+            char boshHarf = soz.charAt(0);
+            char oxirgiHarf = soz.charAt(soz.length() - 1);
+
+            if (Character.isUpperCase(boshHarf) && Character.isUpperCase(oxirgiHarf)) {
+                System.out.println(soz);
+            }
+        }
+    }
+}
