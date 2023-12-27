@@ -1,0 +1,22 @@
+package String;
+
+import java.util.Scanner;
+
+public class String7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        if (!satr.isEmpty()) {
+            char birinchi = satr.charAt(0);
+            char oxirgi = satr.charAt(satr.length() - 1);
+
+            System.out.println("Birinchi belgi kodi: " + (int) birinchi);
+            System.out.println("Oxirgi belgi kodi: " + (int) oxirgi);
+        } else {
+            System.out.println("Satr bo'sh");
+        }
+    }
+}
