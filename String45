@@ -1,0 +1,24 @@
+package String;
+
+import java.util.Scanner;
+
+public class String45 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        String[] sozl = satr.split(" ");
+
+        int q = Integer.MAX_VALUE;
+
+        for (String soz : sozl) {
+            if (soz.length() < q) {
+                q = soz.length();
+            }
+        }
+
+        System.out.println("Eng qisqa so'z uzunligi: " + q);
+    }
+}
