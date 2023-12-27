@@ -1,0 +1,21 @@
+package String;
+
+import java.util.Scanner;
+
+public class String5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("kicik harfda chiqaruvchi dastur: ");
+        int N = scanner.nextInt();
+
+        if (1 <= N && N <= 26) {
+
+            for (int i = N - 1; i >= 0; i--) {
+                char s = (char) ('a' + i);
+                System.out.print(s + " ");
+            }
+        } else {
+            System.out.println(" Son hato ");
+        }
+    }
+}
