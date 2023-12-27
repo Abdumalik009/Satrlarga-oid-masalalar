@@ -1,0 +1,30 @@
+package String;
+
+
+
+import java.util.Scanner;
+
+public class String35 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("S1 satrini kiriting: ");
+        String s1 = scanner.nextLine();
+        System.out.print("S2 satrini kiriting: ");
+        String s2 = scanner.nextLine();
+
+        String natija = ol(s1, s2);
+        System.out.println("Natija: " + natija);
+    }
+
+    private static String ol(String s1, String s2) {
+        StringBuilder yangiSatr = new StringBuilder(s1);
+
+        while (yangiSatr.toString().contains(s2)) {
+            int index = yangiSatr.indexOf(s2);
+            yangiSatr.delete(index, index + s2.length());
+        }
+
+        return yangiSatr.toString();
+    }
+}
