@@ -1,0 +1,22 @@
+package String;
+
+import java.util.Scanner;
+
+public class String44 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        String[] sozl = satr.split(" ");
+
+        for (String soz : sozl) {
+            long aHarfiSoni = soz.chars().filter(ch -> ch == 'A').count();
+
+            if (aHarfiSoni == 3 && Character.isUpperCase(soz.charAt(0))) {
+                System.out.println(soz);
+            }
+        }
+    }
+}
