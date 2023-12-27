@@ -1,0 +1,19 @@
+package String;
+
+import java.util.Scanner;
+
+public class String41 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Gap kiriting: ");
+        String str = scanner.nextLine();
+
+        String[] words = str.split(" ");
+        int sozson = words.length;
+
+        System.out.println("Satrdagi so'zlar soni: " + sozson);
+
+
+    }
+}
