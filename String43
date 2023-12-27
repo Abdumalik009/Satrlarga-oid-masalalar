@@ -1,0 +1,20 @@
+package String;
+
+import java.util.Scanner;
+
+public class String43 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.nextLine();
+
+        String[] sozl = satr.split(" ");
+
+        for (String soz : sozl) {
+            if (soz.contains("A") && Character.isUpperCase(soz.charAt(0))) {
+                System.out.println(soz);
+            }
+        }
+    }
+}
