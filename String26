@@ -1,0 +1,22 @@
+package String;
+
+import java.util.Scanner;
+
+public class String26 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("N natural sonini kiriting: ");
+        int n = scanner.nextInt();
+        System.out.print("Satr kiriting: ");
+        String satr = scanner.next();
+
+        if (satr.length() > n) {
+            String yangiSatr = satr.substring(0, n);
+            System.out.println("Natija: " + yangiSatr);
+        } else {
+            String yangiSatr = ".".repeat(n - satr.length()) + satr;
+            System.out.println("Natija: " + yangiSatr);
+        }
+    }
+}
